@@ -44,6 +44,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if($cv_url && !filter_var($cv_url , FILTER_VALIDATE_URL)){
         $errors['cv_url'] = 'must be a validate URL';
     }
+    if(empty($errors)){
+        echo 'registration success' . '<br>';
+    }
 }
     function post_data($field){
         $_POST[$field] ??= false;
